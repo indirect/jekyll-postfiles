@@ -20,7 +20,7 @@ module Jekyll
 
       site.posts.each do |post|
         # Go back to the single-file post name
-        postfile_id = post.id.gsub(/(\d{4})\/(\d\d)\/(\d\d)\/(.*)/, '\1-\2-\3-\4')
+        postfile_id = post.id.gsub(/[\w\/]*(\d{4})\/(\d\d)\/(\d\d)\/(.*)/, '\1-\2-\3-\4')
         # Get the directory that files from this post would be in
         postfile_dir = File.join(site.config['source'], '_postfiles', postfile_id)
         
