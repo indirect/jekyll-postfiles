@@ -18,7 +18,7 @@ module Jekyll
         return
       end
 
-      site.posts.each do |post|
+      site.posts.docs.each do |post|
         # Go back to the single-file post name
         postfile_id = post.id.gsub(/[\s\w\/%]*(\d{4})\/(\d\d)\/(\d\d)\/(.*)/, '\1-\2-\3-\4')
         # Get the directory that files from this post would be in
